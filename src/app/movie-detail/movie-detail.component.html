@@ -1,0 +1,47 @@
+<div class="container">
+   
+
+
+    <div *ngIf="movie" class="movie-card">
+        <div class="poster-container">
+          <img [src]="movie.poster" alt="Movie Poster" class="movie-poster">
+        </div>
+        <div class="movie-details">
+          <h2 class="movie-title"><strong>{{ movie.title }}</strong></h2>
+          <p class="movie-year">Year: {{ movie.year }}</p>
+          <p class="movie-rating">Rating: {{ movie.rating }}</p>
+          <p class="movie-genre">Genre: {{ movie.genre }}</p>
+          
+          <div class="button-container">
+            <a [href]="movie.trailer" class="btn btn" target="_blank">Watch Trailer</a>
+          </div>
+          <div class="movie-info">
+            <h3 class="section-title">Plot</h3>
+            <p class="plot">{{ movie.plot }}</p>
+            <h3 class="section-title">Runtime</h3>
+            <p class="runtime">{{ movie.runtime }} min</p>
+            <h3 class="section-title">Awards</h3>
+            <p class="awards">{{ movie.awards }}</p>
+            <h3 class="section-title">Country</h3>
+            <p class="country">{{ movie.country }}</p>
+            <h3 class="section-title">Language</h3>
+            <p class="language">{{ movie.language }}</p>
+            <h3 class="section-title">Box Office</h3>
+            <p class="box-office">{{ movie.boxOffice }}</p>
+            <h3 class="section-title">Production</h3>
+            <p class="production">{{ movie.production }}</p>
+            <h3 class="section-title">Website</h3>
+            <p class="websitelink"><a href="">{{ movie.website }}></a></p>
+            
+
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      
+    
+      
+
+</div>

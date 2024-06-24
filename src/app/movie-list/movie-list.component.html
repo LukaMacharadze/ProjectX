@@ -1,0 +1,84 @@
+<div class="carousel-container">
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item" data-bs-interval="10000">
+        <a href="movie/4"><img src="https://getwallpapers.com/wallpaper/full/c/3/9/20926.jpg" class="d-block w-100 c-img" alt="..."></a>
+        <div class="carousel-caption  c-iop">
+          <h1><strong>Pulp Fiction</strong></h1>
+          <button class="caruselbtn"><strong>Expand your knowledge about movies!</strong></button>
+        </div>
+      </div>
+      <div class="carousel-item c-item" data-bs-interval="2000">
+        <a href="movie/11"><img src="https://images4.alphacoders.com/885/885300.png" class="d-block w-100 c-img" alt="..."></a>
+        <div class="carousel-caption  c-iop">
+          <h1><strong>Fight Club</strong></h1>
+          <button class="caruselbtn"><strong>Expand your knowledge about movies!</strong></button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <a href="movie/14"><img src="https://m.media-amazon.com/images/S/pv-target-images/aa06c45c32304aa3c9c2758d683b0735042f65de98f5dc5a6da8cf629e286829.jpg" class="d-block w-100 c-img" alt="..."></a>
+        <div class="carousel-caption  c-iop">
+          <h1><strong>The Silence of the Lambs</strong></h1>
+          <button class="caruselbtn"><strong>Expand your knowledge about movies!</strong></button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden left-arrow">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Filter by name">
+  <input type="number"  class="form-control c-jkl " [(ngModel)]="yearFilter" placeholder="Filter by year">
+  <input type="number" class="form-control c-jkl" [(ngModel)]="ratingFilter" placeholder="Filter by rating">
+</div>
+
+
+
+
+
+
+<div [class.show]="alertVisible" class="custom-alert">
+  {{ alertMessage }}
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="movie-list">
+    <div *ngFor="let movie of filteredMovies" class="movie-card">
+      <img [src]="movie.poster" alt="Movie Poster" class="movie-poster">
+      <div class="movie-details">
+        <h2 class="movie-title"><strong>{{ movie.title }}</strong></h2>
+        <p class="movie-year">Year: {{ movie.year }}</p>
+        <p class="movie-rating">Rating: {{ movie.rating }}</p>
+        <p class="movie-genre">Genre: {{ movie.genre }}</p>
+        <div class="button-container">
+          <button class="details-button" [routerLink]="['/movie', movie.id]"><strong>Check Movie</strong></button>
+          <button class="details-button" (click)="addToFavorites(movie)"><strong>Add to Favorites</strong></button>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div *ngIf="noMoviesFound; else foundMovies">{{ noMoviesFoundMsg }}</div>
+  <ng-template #foundMovies>
+    
+  </ng-template>
+</div>
+

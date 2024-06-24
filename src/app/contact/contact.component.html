@@ -1,0 +1,55 @@
+
+
+
+  
+ 
+  <div class="container">
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Have a question and need to talk to us? Please complete this form and we will get in touch as soon as possible.</p>
+      
+        <form class="contact-form" (submit)="submitForm()">
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required>
+          </div>
+          <div>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" [(ngModel)]="subject" required>
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" [(ngModel)]="message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+        
+        
+        <div *ngIf="!isInputsFilled" class="popup-alert error">
+          <div class="popup-alert-content">
+            <span class="closebtn" (click)="isInputsFilled = true">&times;</span>
+            <p>Fill all the inputs.</p>
+          </div>
+        </div>
+        
+        
+        <div *ngIf="isFormSubmitted" class="popup-alert success">
+          <div class="popup-alert-content">
+            <span class="closebtn" (click)="isFormSubmitted = false">&times;</span>
+            <p>Your review was sent!</p>
+          </div>
+        </div>
+        
+        
+        
+
+
+
+
+
+      </div>
+      
+      
+
+</div>

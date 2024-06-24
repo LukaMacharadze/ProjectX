@@ -1,0 +1,33 @@
+
+<div class="container">
+
+
+    <!-- favorite-movies.component.html -->
+<div *ngIf="favoriteMovies.length === 0">
+    <h1>Favorite Movies is Empty :/</h1>
+  </div>
+  <div *ngIf="favoriteMovies.length > 0" class="favdiv">
+    <div *ngFor="let movie of favoriteMovies" class="movie-card">
+      <!--<div class="movie-card">-->
+        <img [src]="movie.poster" class="movie-poster" alt="Movie Poster">
+        <div class="movie-details">
+          <h3 class="movie-title">{{ movie.title }}</h3>
+          <p class="movie-year">{{ movie.year }}</p>
+          <p class="movie-rating">{{ movie.rating }}</p>
+          <p class="movie-genre">{{movie.genre}}</p>
+          <button class="details-button" [routerLink]="['/movie', movie.id]"><strong>Check Movie</strong></button>
+          <button class="details-button" (click)="removeFromFavorites(movie)">Remove</button>
+        </div>
+      <!--</div>-->
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+  

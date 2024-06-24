@@ -1,0 +1,166 @@
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+ 
+  
+}
+
+
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: 4px solid #ffc107;
+  box-shadow: 0 0 10px rgba(252, 255, 57, 0.918);
+
+  border-radius: 20px;
+  background-color: #343a40;
+}
+
+
+
+.contact-container, h2 p {
+  color: white;
+}
+
+
+
+
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+
+  border: 4px solid #ffc107;
+  box-shadow: 0 0 10px rgba(252, 255, 57, 0.918);
+
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px; 
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  
+  background-color: 0 0 10px rgba(252, 255, 57, 0.918);
+  border: 2px solid #ffc107;
+  
+  color: #ffc107;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ffc107;
+  box-shadow: 0 0 10px rgba(252, 255, 57, 0.918);
+  border: 2px solid #ffc107;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.popup-alert {
+  position: absolute;
+  top: 67px; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  transition: top 0.3s ease; 
+}
+
+.popup-alert.active {
+  top: 60px; 
+}
+
+.popup-alert-content {
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+  border-radius: 0;
+}
+
+.popup-alert-content p {
+  margin: 0;
+  font-size: 18px;
+  margin-left: 820px;
+}
+
+.popup-alert.success {
+  background-color: #4CAF50; 
+}
+
+.popup-alert.error {
+  background-color: #f44336; 
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

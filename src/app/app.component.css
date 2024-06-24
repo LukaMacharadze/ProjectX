@@ -1,0 +1,108 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffc107;
+    
+}
+
+.social-icons {
+    display: flex;
+    padding: 0;
+}
+
+.social-icons li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    display: inline-block;
+}
+
+.social-icons li img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons li img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ffc107;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
